@@ -66,9 +66,9 @@ function createTabs (tabObj, divClass, divId) {
 	})
 
     // add event handler to hide/show tabs on click
-    //$(".tablink").on('click','a',showTab("tabLinks",$(this).attr("id")));	
     $(".tablink").on('click', function () {
     	showTab($(this));
+    	return false; // this is important! if you don't add this, the default behaviour of the click event is to navigate to the anchor (so you need to set the focus at the top of the page, making it jump around)
     })
 }
 
@@ -85,13 +85,12 @@ function showTab (element) {
 		tabClass = "#" + $(this).attr("id");
 
 		if ($(this).attr("id") === element.text().toLowerCase()) {
-			$(this).show();	
-			$("html, body").animate({ scrollTop: 0 });
+			$(this).fadeIn(1000);	
 		}
 		else {
 			$(this).hide();
 		}		
-	})
+	})	
 }
 
 
