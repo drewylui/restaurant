@@ -1,6 +1,6 @@
 // Set up data
 var homeTabContent = {
-	header: "Blancharu",
+	header: "About",
 	tagline: "Blancharu is a fusion Japanese French restaurant that serves the most delicious food!",
 	body: "Bacon ipsum dolor sit amet meatloaf swine shankle pig pastrami fatback. Venison leberkas jowl short ribs, shankle spare ribs sirloin swine beef ribs beef sausage flank. Shank bresaola pork chop ball tip strip steak. Flank ribeye tenderloin doner hamburger boudin pancetta turkey pig pork bresaola. Turducken salami t-bone beef andouille pastrami ham, shoulder pork chop short ribs spare ribs jerky sirloin brisket. Rump doner ground round porchetta andouille boudin pork belly cow.",
 	image: "<img width=600px height=400px src='http://static3.artspan.com/member/lindarettichdesign/500/2004810.jpg' />"
@@ -15,7 +15,7 @@ var contactTabContent = {
 	header: "Contact",
 	tagline: "Contact us. Details are below.",
 	body: "Portland small batch retro, sartorial Neutra messenger bag McSweeney's Banksy polaroid forage DIY. Gluten-free try-hard four loko, asymmetrical jean shorts PBR&B kale chips actually gastropub. Fap mumblecore fixie Pitchfork, ugh actually you probably haven't heard of them plaid wolf next level disrupt put a bird on it. Forage chillwave roof party, kitsch shabby chic Pitchfork Echo Park next level church-key fap gentrify. Fashion axe ugh semiotics VHS, Carles hashtag Thundercats photo booth put a bird on it art party brunch iPhone 3 wolf moon. XOXO pug 3 wolf moon, narwhal blog farm-to-table actually Schlitz direct trade Odd Future. Disrupt actually fixie sartorial Marfa pop-up, synth mixtape letterpress pickled fingerstache pour-over VHS.",
-	image: "<img width=600px height=400px src='http://letcteachers.files.wordpress.com/2011/02/red-phone1.jpg' />"
+	image: "<img width=600px height=400px src='http://media2.s-nbcnews.com/i/streams/2013/June/130625/6C8013400-g-cvr-121204-cell-phone-6a.jpg' />"
 }; 
 var tabContent = {
 	home: homeTabContent,
@@ -34,6 +34,7 @@ function createTabs (tabObj, divClass, divId) {
 	var tabLinks = "";
 	var parentDivId = "#" + divId;
 
+	$(parentDivId).append("<div id='intro'><div class='header'>Welcome to Blancharu</div><div class='body'>This is the website for the Blancharu restaurant.</div></div>");	
 	$(parentDivId).append("<div id='tabheaderdiv'></div>");	
 	$(parentDivId).append("<div id='bodydiv'></div>");	
 

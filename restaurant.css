@@ -1,3 +1,7 @@
+#intro {
+	padding: 5px;
+}
+
 #tabheaderdiv {
 	display: block;
 }
@@ -52,6 +56,7 @@
 .body {
 	font-size: 18px;
 	font-family: Garamond;	
+	padding-bottom: 20px;
 }
 
 .image {
