@@ -44,7 +44,7 @@ function createTabs (tabObj, divClass, divId) {
 		var anchor = "#" + name;
 
 		tabLinks = "<a class='tablink' href='" + anchor + "'>" + String(name).toUpperCase() + "</a>"
-		$('#tabheaderdiv').append("<div class='tablinkdiv'>" + tabLinks + "</div>");		
+		$('#tabheaderdiv').append("<div class='tablinkdiv' id='" + name + "linkdiv" + "'>" + tabLinks + "</div>");		
     }    
 
 	// create the tabs
@@ -60,8 +60,12 @@ function createTabs (tabObj, divClass, divId) {
 
 	// hide all tabs except for the first one
 	$(".tab").each(function(index) {
+		divID = "#" + $(this).attr("id") + "linkdiv";
 		if (index != 0) {
 			$(this).hide();			
+		}
+		else {
+			$(divID).css("background-color","#DDDDDD");
 		}		
 	})
 
@@ -83,12 +87,17 @@ function populateTab (contentObj, parentDivId) {
 function showTab (element) {	
 	$(".tab").each(function(index){
 		tabClass = "#" + $(this).attr("id");
+		divID = "#" + $(this).attr("id") + "linkdiv";
+
+		console.log(divID);
 
 		if ($(this).attr("id") === element.text().toLowerCase()) {
-			$(this).fadeIn(1000);	
+			$(this).fadeIn(1000);
+			$(divID).css("background-color","#DDDDDD");
 		}
 		else {
 			$(this).hide();
+			$(divID).css("background-color","#555555");			
 		}		
 	})	
 }
