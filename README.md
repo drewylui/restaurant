@@ -1,7 +1,7 @@
 restaurant
 ==========
 
-**Deprecated in favour of this repository: [code-sydney repository] (https://github.com/drewylui/code-sydney)**
+**Deprecated in favour of this repository: [code-sydney repository](https://github.com/drewylui/code-sydney)**
 
 Restaurant project for Odin Project. Week 2 exercise: http://codesydney.com/schedule/
 
